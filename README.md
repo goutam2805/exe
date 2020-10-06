@@ -15,5 +15,5 @@ https://docs.aws.amazon.com/cli/latest/userguide/install-macos.html
 * [AWS ECS](https://docs.aws.amazon.com/ec2/index.html)
 
 # AWS AMI
-[ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html)
-[Ec2](https://cloud-images.ubuntu.com/locator/ec2/)
+* [ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html)
+* [Ec2](https://cloud-images.ubuntu.com/locator/ec2/)
