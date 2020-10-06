@@ -1,3 +1,4 @@
+#this basic security group will be attached to the ecs instances
 resource "aws_security_group" "ecs-securitygroup" {
   vpc_id      = "${aws_vpc.main.id}"
   name        = "ecs"
@@ -8,7 +9,7 @@ resource "aws_security_group" "ecs-securitygroup" {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-
+#to allow port only from elb and port 22 for own ip address
   ingress {
     from_port       = 3000
     to_port         = 3000

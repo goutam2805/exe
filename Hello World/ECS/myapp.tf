@@ -1,17 +1,17 @@
-# app
-
+# myapp
+# myapp has template app.json.tpl
 data "template_file" "myapp-task-definition-template" {
   template = "${file("templates/app.json.tpl")}"
   vars = {
     REPOSITORY_URL = "${replace("${aws_ecr_repository.myapp.repository_url}", "https://", "")}"
   }
 }
-
+#ecs task definition
 resource "aws_ecs_task_definition" "myapp-task-definition" {
   family                = "myapp"
   container_definitions = "${data.template_file.myapp-task-definition-template.rendered}"
 }
-
+#the load balancer, which will be exposed
 resource "aws_elb" "myapp-elb" {
   name = "myapp-elb"
 
@@ -21,7 +21,7 @@ resource "aws_elb" "myapp-elb" {
     lb_port           = 80
     lb_protocol       = "http"
   }
-
+#health check with will reflect in the status
   health_check {
     healthy_threshold   = 3
     unhealthy_threshold = 3

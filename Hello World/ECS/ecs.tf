@@ -1,3 +1,4 @@
+#we are using the ECR terraform state so that terraform can relate
 # cluster
 resource "aws_ecs_cluster" "example-cluster" {
   name = "example-cluster"
@@ -5,6 +6,7 @@ resource "aws_ecs_cluster" "example-cluster" {
 
 resource "aws_launch_configuration" "ecs-nodejs-launchconfig" {
   name_prefix          = "ecs-launchconfig"
+# image id will be picked up from the vars
   image_id             = "${lookup(var.ECS_AMIS, var.AWS_REGION)}"
   instance_type        = "${var.ECS_INSTANCE_TYPE}"
   key_name             = "${aws_key_pair.mykeypair.key_name}"

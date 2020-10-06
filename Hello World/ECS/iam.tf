@@ -1,4 +1,4 @@
-# ecs ec2 role
+#role to be attached to ecs ec2 instance
 resource "aws_iam_role" "ecs-ec2-role" {
   name               = "ecs-ec2-role"
   assume_role_policy = <<EOF
@@ -66,6 +66,7 @@ policy = <<EOF
               "ecr:BatchCheckLayerAvailability",
               "ecr:GetDownloadUrlForLayer",
               "ecr:BatchGetImage",
+# to access the logs
               "logs:CreateLogStream",
               "logs:PutLogEvents"
             ],
@@ -108,7 +109,7 @@ resource "aws_iam_role" "ecs-service-role" {
 }
 EOF
 }
-
+#the above service created will be attached to the below service role
 resource "aws_iam_policy_attachment" "ecs-service-attach1" {
   name       = "ecs-service-attach1"
   roles      = ["${aws_iam_role.ecs-service-role.name}"]
