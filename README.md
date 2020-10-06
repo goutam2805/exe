@@ -14,3 +14,6 @@ https://docs.aws.amazon.com/cli/latest/userguide/install-macos.html
 * [Terraform AWS](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
 * [AWS ECS](https://docs.aws.amazon.com/ec2/index.html)
 
+# AWS AMI
+[ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html)
+[Ec2](https://cloud-images.ubuntu.com/locator/ec2/)
