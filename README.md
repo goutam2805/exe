@@ -18,4 +18,5 @@ https://docs.aws.amazon.com/cli/latest/userguide/install-macos.html
 * [ECS](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-optimized_AMI.html)
 * [Ec2](https://cloud-images.ubuntu.com/locator/ec2/)
 
-For the project work-around with the snippets for executed commands please refer [the wiki](https://github.com/goutam2805/exe/wiki)
+# Wiki
+For the project work-around with the snippets of the executed commands please refer [the wiki](https://github.com/goutam2805/exe/wiki)
